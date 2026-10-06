@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import HomeStack from './Homestack';
 import SettingsScreen from '../screens/SettingsScreen';
+import DetailsScreen from '../screens/Detailsscreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -31,6 +32,11 @@ export default function TabNavigator() {
                 name="SettingsTab"
                 component={SettingsScreen}
                 options={{ title: 'Settings Mione', headerShown: false }}
+            />
+            <Tab.Screen
+                name="Divyanshu Page"
+                component={DetailsScreen}
+                options={{ title: "New Page", headerShown: true }}
             />
         </Tab.Navigator>
     );
